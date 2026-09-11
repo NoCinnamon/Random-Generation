@@ -1,0 +1,49 @@
+.page-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 48px 24px 72px;
+  display: flex;
+  flex-direction: column;
+}
+
+body{
+  background-color: rgb(74, 77, 85);
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+h1 {
+  display:flex;
+  justify-content: center;
+  margin:0 0 80px; 
+  font-size: 70px;
+  color:azure;
+}
+
+.mood{
+  display:flex;
+  flex-direction: row;
+  gap: 12px;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;   /* center the row */
+}
+
+.mood-input{
+  flex: 1;          /* input grows/shrinks with the screen */
+  min-width:0;
+  font-size:1rem;
+  padding:10px 12px;
+}
+
+#mood-button{
+  flex-shrink: 0;   /* button stays readable, doesn’t get crushed */
+  font-size: 1rem;
+  padding: 10px 18px;
+  color: #fff;
+  background: rgb(3, 210, 228);
+  border: 0;
+  border-radius: 999px;
+  padding: 10px 16px;
+  cursor: pointer;
+  font-weight: bold;
+}

@@ -1,0 +1,11 @@
+{
+    "oppositeMood":{
+        "happy": "sad",
+        "sad": "happy",
+        "angry": "laughing at you",
+        "calm": "nervous, fell pressured",
+        "tired": "busy of lots of things",
+        "slap": "slap me hard"
+    }
+}
+
