@@ -47,3 +47,10 @@ h1 {
   cursor: pointer;
   font-weight: bold;
 }
+
+#mood-gif {
+  display: block;
+  max-width: 400px;
+  width: 100%;
+  margin: 40px auto 0;
+}
