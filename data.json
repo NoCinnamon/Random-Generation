@@ -6,6 +6,14 @@
         "calm": "nervous, fell pressured",
         "tired": "busy of lots of things",
         "slap": "slap me hard"
+    },
+
+    "makeSalad": {
+        "toppings": ["worm candy", "KitCat biets", "ice cubes"],
+        "sauces": ["sardine sauce", "Hershey's chocolate sauces"],
+        "liquids": ["goat milk", "Beverly soda"],
+        "whatevers": ["fresh cracked egg", "smashed potato"],
+        "oils": ["olive oil", " beef lard", "sunflower seed oil", "grasey butter"]
     }
 }
 

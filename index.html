@@ -7,16 +7,31 @@
   <link rel='stylesheet' href="style.css"/>
 </head>
 <body>
-  <div class="page-wrapper">
-    <h1>I know you want to punch me ~ </h1>
-
-    <div class="mood">
-      <input type="text" class="mood-input">
-      <button type="button" id="mood-button">Hit me</button>
+  <div class="container">
+    <div class="punchMe">
+      <h1>I know you want to</h1>
+      <img src="punch.png" alt="punch" id="punchMeImage">
+      <h1>me!</h1>
     </div>
 
+    <div class="moodEntree">
+      <div class="input-box">
+        <input type="text" class="mood-input" required>
+        <span class="labelLine">Enter your mood</span>
+      </div>
+      <button type="button" id="button-hitMe">Hit me</button>
+    </div>
     <img id="mood-gif" alt="mood gif">
 
+    <h2>YOUR Mestery Salad Recipe</h2>
+    <div class="salad-baseForm">
+      <input type="text" id="protein" placeholder="Protein (e.g. chicken)">
+      <input type="text" id="greens" placeholder="Greens (e.g. lettuce)">
+      <input type="text" id="dressing" placeholder="Dressing (e.g. ranch)">
+      <button type="button" id="button-makeSalad">Make salad</button>
+    </div>
+    <pre id="salad-result"></pre>   <!-- preformatted text.
+    <div type="button"> </div> -->
   </div>
   <script src="config.js"></script>
   <script src="script.js"></script>

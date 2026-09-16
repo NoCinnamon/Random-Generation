@@ -1,51 +1,110 @@
-.page-wrapper {
+.container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 48px 24px 72px;
   display: flex;
   flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-body{
+.punchMe {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 16px;
+}
+
+#punchMeImage {
+  width: 90px;
+  height: auto;
+}
+
+body {
   background-color: rgb(74, 77, 85);
   font-family: Georgia, "Times New Roman", serif;
+  display: flex;
+  min-height: 100vh;
+  margin: 0;
 }
 
 h1 {
-  display:flex;
-  justify-content: center;
-  margin:0 0 80px; 
+  
+  margin: 0;
   font-size: 70px;
-  color:azure;
+  color: azure;
+  white-space: nowrap;
+
+
 }
 
-.mood{
-  display:flex;
+.moodEntree {
+  display: flex;
   flex-direction: row;
+  align-items: stretch; /* button same height as input */
   gap: 12px;
   width: 100%;
-  max-width: 600px;
-  margin: 0 auto;   /* center the row */
+  margin: 0 auto;
 }
 
-.mood-input{
-  flex: 1;          /* input grows/shrinks with the screen */
-  min-width:0;
-  font-size:1rem;
-  padding:10px 12px;
+.input-box {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  width:100%;
 }
 
-#mood-button{
-  flex-shrink: 0;   /* button stays readable, doesn’t get crushed */
+input.mood-input {
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 2.2rem;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 2px solid #f0ffff;
+  background: transparent;
+  color: #f0ffff;
+  outline: none;
+  transition: 0.2s ease;
+}
+
+.labelLine {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 10px 12px;
+  font-size: 1.6rem;
+  color: #b1b3b3;
+  pointer-events: none; /* clicks go to the input */
+  transition: 0.2s ease;
+}
+
+input.mood-input:focus,
+input.mood-input:valid {
+  color: #66ff00;
+  border: 2px solid #66ff00;
+}
+
+input.mood-input:focus + .labelLine,
+input.mood-input:valid + .labelLine {
+  color: #66ff00;
+  background-color: rgb(74, 77, 85); /* covers the border line */
+  transform: translate(12px, -50%) scale(0.88);
+  padding: 0 8px;
   font-size: 1rem;
-  padding: 10px 18px;
-  color: #fff;
-  background: rgb(3, 210, 228);
-  border: 0;
-  border-radius: 999px;
-  padding: 10px 16px;
-  cursor: pointer;
+}
+
+#button-hitMe{
+  flex-shrink: 0;
+  box-sizing: border-box;
+  font-size: 1.5rem;
   font-weight: bold;
+  padding: 10px 28px;
+  color: #fff;
+  background: rgb(4, 143, 243);
+  border: 2px solid #f0ffff;
+  border-radius: 10px; /* same as input */
+  cursor: pointer;
 }
 
 #mood-gif {
@@ -54,3 +113,14 @@ h1 {
   width: 100%;
   margin: 40px auto 0;
 }
+
+h2 {
+  color: white;
+}
+
+.salad-baseForm{
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  width:100%;
+} 
