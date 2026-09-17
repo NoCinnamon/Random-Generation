@@ -26,7 +26,7 @@ moodInputButton.addEventListener("click", async function() {
 
 
 const makeSaladButton = document.querySelector("#button-makeSalad");
-const saladResult = document.querySelector("#salad-result")
+const saladBox = document.getElementById("salad-result");
 
 function randomPick(saladArr){
     return saladArr[Math.floor(Math.random() * saladArr.length)]    
@@ -37,16 +37,16 @@ makeSaladButton.addEventListener("click", async function(){
     const greens = document.querySelector("#greens").value.trim().toLowerCase();
     const dressing = document.querySelector("#dressing").value.trim().toLowerCase();
 
-    const response = await fetch("data.json");          
-    const data = await response.json();                 
+    const response = await fetch("data.json"); 
+    const data = await response.json();
     const salad = data.makeSalad;
-
     const topping = randomPick(salad.toppings);
     const sauce = randomPick(salad.sauces);
     const liquid = randomPick(salad.liquids);
     const whatever = randomPick(salad.whatevers);
     const oil = randomPick(salad.oils);
 
+    const saladResult = document.createElement("pre");
     saladResult.textContent = 
     `Your Mystery Salad:
     -------------------
@@ -61,4 +61,6 @@ makeSaladButton.addEventListener("click", async function(){
     
     And, voilà! you got your salad!
     have a miserable day!`;
+
+    saladBox.replaceChildren(saladResult);  
 })
